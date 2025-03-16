@@ -20,8 +20,7 @@ export default function Navbar({ cartItems, onUpdateQuantity, onRemoveItem, onCh
         <Link href="/" className="text-xl font-bold">Livraria Virtual</Link>
         
         <div className="hidden md:flex space-x-6">
-          <Link href="/" className="hover:text-blue-200 transition-colors">Início</Link>
-          <Link href="/produtos" className="hover:text-blue-200 transition-colors">Livros</Link>
+          <Link href="/" className="hover:text-blue-200 transition-colors">Livros</Link>
           <Link href="#" className="hover:text-blue-200 transition-colors">Sobre</Link>
           <Link href="#" className="hover:text-blue-200 transition-colors">Contato</Link>
         </div>

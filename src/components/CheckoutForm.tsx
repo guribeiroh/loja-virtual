@@ -55,7 +55,7 @@ export default function CheckoutForm({ cartItems, onClose, onCheckoutSuccess }: 
       };
       
       // URL do webhook a ser substituída pelo real
-      const webhookUrl = 'https://webhook.site/seu-endpoint';
+      const webhookUrl = 'https://webhook.site/af25d820-e37b-4e7a-9e6b-951208a9ffa8';
       
       // Enviar dados para o webhook
       const response = await fetch(webhookUrl, {
