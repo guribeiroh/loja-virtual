@@ -14,8 +14,8 @@ export default function BookCard({ book, onAddToCart }: BookCardProps) {
   };
 
   return (
-    <Link href={`/livro/${book.id}`} className="block">
-      <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow h-full flex flex-col">
+    <Link href={`/livro/${book.id}`}>
+      <div className="block bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow h-full flex flex-col">
         <div className="relative h-64 w-full bg-gray-200">
           {book.coverImage ? (
             <Image

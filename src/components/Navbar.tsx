@@ -17,12 +17,20 @@ export default function Navbar({ cartItems, onUpdateQuantity, onRemoveItem, onCh
   return (
     <nav className="bg-orange-600 text-white p-4 sticky top-0 z-10 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold">Livraria Virtual</Link>
+        <Link href="/">
+          <span className="text-xl font-bold">Livraria Virtual</span>
+        </Link>
         
         <div className="hidden md:flex space-x-6">
-          <Link href="/" className="hover:text-orange-200 transition-colors">Livros</Link>
-          <Link href="#" className="hover:text-orange-200 transition-colors">Sobre</Link>
-          <Link href="#" className="hover:text-orange-200 transition-colors">Contato</Link>
+          <Link href="/">
+            <span className="hover:text-orange-200 transition-colors">Livros</span>
+          </Link>
+          <Link href="#">
+            <span className="hover:text-orange-200 transition-colors">Sobre</span>
+          </Link>
+          <Link href="#">
+            <span className="hover:text-orange-200 transition-colors">Contato</span>
+          </Link>
         </div>
         
         <div className="flex items-center space-x-4">
