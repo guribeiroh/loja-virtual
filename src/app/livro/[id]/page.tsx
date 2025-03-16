@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useParams } from 'next/navigation';
 import Image from 'next/image';
 import { Book } from '@/types/Book';
 import { books } from '@/data/books';
@@ -11,9 +11,10 @@ interface CartItem extends Book {
   quantity: number;
 }
 
-export default function BookDetailPage({ params }: { params: { id: string } }) {
+export default function BookDetailPage() {
+  const params = useParams();
   const router = useRouter();
-  const bookId = params.id;
+  const bookId = params.id as string;
   const [book, setBook] = useState<Book | null>(null);
   const [quantity, setQuantity] = useState(1);
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
