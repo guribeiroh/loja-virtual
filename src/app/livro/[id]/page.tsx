@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Book } from '@/types/Book';
 import { books } from '@/data/books';
 import Navbar from '@/components/Navbar';
@@ -122,11 +121,9 @@ export default function BookDetailPage({ params }: { params: { id: string } }) {
         />
         <main className="flex-grow container mx-auto px-4 py-8 flex flex-col items-center justify-center">
           <p className="text-xl text-red-500 mb-4">{error || 'Livro não encontrado'}</p>
-          <Link href="/">
-            <span className="bg-orange-600 text-white py-2 px-4 rounded-md hover:bg-orange-700 transition-colors">
-              Voltar para a loja
-            </span>
-          </Link>
+          <a href="/" className="bg-orange-600 text-white py-2 px-4 rounded-md hover:bg-orange-700 transition-colors">
+            Voltar para a loja
+          </a>
         </main>
       </div>
     );
@@ -143,14 +140,12 @@ export default function BookDetailPage({ params }: { params: { id: string } }) {
       
       <main className="flex-grow container mx-auto px-4 py-8">
         <div className="mb-6">
-          <Link href="/">
-            <span className="text-orange-600 hover:underline flex items-center gap-1">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              Voltar para a lista de livros
-            </span>
-          </Link>
+          <a href="/" className="text-orange-600 hover:underline flex items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Voltar para a lista de livros
+          </a>
         </div>
         
         <div className="bg-white rounded-lg shadow-md overflow-hidden p-6">
