@@ -6,22 +6,17 @@ export default function Home() {
       {/* Navbar */}
       <nav className="bg-blue-600 text-white p-4">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="text-xl font-bold">Loja Virtual</div>
+          <div className="text-xl font-bold">Livraria Virtual</div>
           <div className="hidden md:flex space-x-6">
             <Link href="/" className="hover:text-blue-200">Início</Link>
-            <Link href="#produtos" className="hover:text-blue-200">Produtos</Link>
+            <Link href="/produtos" className="hover:text-blue-200">Livros</Link>
             <Link href="#sobre" className="hover:text-blue-200">Sobre</Link>
             <Link href="#contato" className="hover:text-blue-200">Contato</Link>
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="#" className="hover:text-blue-200">
+            <Link href="/produtos" className="hover:text-blue-200">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-              </svg>
-            </Link>
-            <Link href="#" className="hover:text-blue-200">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
             </Link>
           </div>
@@ -31,11 +26,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4 flex flex-col items-center text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Bem-vindo à Nossa Loja Virtual</h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl">Descubra produtos incríveis com os melhores preços e entrega rápida para todo o Brasil.</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Bem-vindo à Nossa Livraria Virtual</h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl">Descubra os melhores livros com os melhores preços e entrega rápida para todo o Brasil.</p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="#produtos" className="bg-white text-blue-600 hover:bg-blue-100 font-semibold py-3 px-8 rounded-full transition-colors">
-              Ver Produtos
+            <Link href="/produtos" className="bg-white text-blue-600 hover:bg-blue-100 font-semibold py-3 px-8 rounded-full transition-colors">
+              Ver Livros
             </Link>
             <Link href="#sobre" className="bg-transparent hover:bg-white/10 border border-white font-semibold py-3 px-8 rounded-full transition-colors">
               Saiba Mais
@@ -47,7 +42,7 @@ export default function Home() {
       {/* Features */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Por que escolher nossa loja?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Por que escolher nossa livraria?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -56,7 +51,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2">Qualidade Garantida</h3>
-              <p className="text-gray-600">Todos os nossos produtos passam por rigoroso controle de qualidade.</p>
+              <p className="text-gray-600">Todos os nossos livros são originais e vêm de editoras renomadas.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -65,7 +60,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2">Entrega Rápida</h3>
-              <p className="text-gray-600">Entregamos seus produtos em tempo recorde para todo o Brasil.</p>
+              <p className="text-gray-600">Entregamos seus livros em tempo recorde para todo o Brasil.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -74,38 +69,38 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold mb-2">Atendimento Premium</h3>
-              <p className="text-gray-600">Equipe dedicada para auxiliar em todas as suas dúvidas e necessidades.</p>
+              <p className="text-gray-600">Equipe dedicada para auxiliar em todas as suas dúvidas e recomendações de leitura.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Products Section */}
-      <section id="produtos" className="py-16">
+      {/* Featured Books Section */}
+      <section id="destaques" className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Produtos em Destaque</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Livros em Destaque</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[1, 2, 3, 4].map((item) => (
               <div key={item} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                 <div className="bg-gray-200 h-48 flex items-center justify-center">
-                  <span className="text-gray-500 text-sm">Imagem do Produto {item}</span>
+                  <span className="text-gray-500 text-sm">Imagem do Livro {item}</span>
                 </div>
                 <div className="p-4">
-                  <h3 className="font-semibold text-lg mb-2">Produto Exemplo {item}</h3>
+                  <h3 className="font-semibold text-lg mb-2">Livro Exemplo {item}</h3>
                   <p className="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   <div className="flex justify-between items-center">
-                    <span className="font-bold text-blue-600">R$ 99,90</span>
-                    <button className="bg-blue-600 text-white py-1 px-3 rounded-md hover:bg-blue-700 transition-colors text-sm">
-                      Adicionar
-                    </button>
+                    <span className="font-bold text-blue-600">R$ 49,90</span>
+                    <Link href="/produtos" className="bg-blue-600 text-white py-1 px-3 rounded-md hover:bg-blue-700 transition-colors text-sm">
+                      Ver Detalhes
+                    </Link>
                   </div>
                 </div>
               </div>
             ))}
           </div>
           <div className="text-center mt-10">
-            <Link href="#" className="inline-block bg-blue-600 text-white hover:bg-blue-700 font-semibold py-2 px-6 rounded-md transition-colors">
-              Ver Todos os Produtos
+            <Link href="/produtos" className="inline-block bg-blue-600 text-white hover:bg-blue-700 font-semibold py-2 px-6 rounded-md transition-colors">
+              Ver Todos os Livros
             </Link>
           </div>
         </div>
@@ -115,7 +110,7 @@ export default function Home() {
       <section className="bg-blue-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Receba Nossas Ofertas</h2>
-          <p className="max-w-2xl mx-auto mb-8 text-lg">Inscreva-se em nossa newsletter e receba ofertas exclusivas, novidades e descontos especiais diretamente no seu e-mail.</p>
+          <p className="max-w-2xl mx-auto mb-8 text-lg">Inscreva-se em nossa newsletter e receba ofertas exclusivas, novidades literárias e descontos especiais diretamente no seu e-mail.</p>
           <div className="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
             <input 
               type="email" 
@@ -134,8 +129,8 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">Loja Virtual</h3>
-              <p className="text-gray-400 mb-4">Sua melhor experiência de compra online com produtos de qualidade e preços imbatíveis.</p>
+              <h3 className="text-lg font-semibold mb-4">Livraria Virtual</h3>
+              <p className="text-gray-400 mb-4">Sua melhor experiência de compra de livros online com produtos de qualidade e preços imbatíveis.</p>
               <div className="flex space-x-4">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
                   <span className="sr-only">Facebook</span>
@@ -161,7 +156,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
               <ul className="space-y-2">
                 <li><Link href="/" className="text-gray-400 hover:text-white transition-colors">Início</Link></li>
-                <li><Link href="#produtos" className="text-gray-400 hover:text-white transition-colors">Produtos</Link></li>
+                <li><Link href="/produtos" className="text-gray-400 hover:text-white transition-colors">Livros</Link></li>
                 <li><Link href="#sobre" className="text-gray-400 hover:text-white transition-colors">Sobre Nós</Link></li>
                 <li><Link href="#contato" className="text-gray-400 hover:text-white transition-colors">Contato</Link></li>
               </ul>
@@ -169,10 +164,10 @@ export default function Home() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Categorias</h3>
               <ul className="space-y-2">
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Eletrônicos</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Roupas</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Acessórios</Link></li>
-                <li><Link href="#" className="text-gray-400 hover:text-white transition-colors">Casa & Decoração</Link></li>
+                <li><Link href="/produtos" className="text-gray-400 hover:text-white transition-colors">Fantasia</Link></li>
+                <li><Link href="/produtos" className="text-gray-400 hover:text-white transition-colors">Ficção Científica</Link></li>
+                <li><Link href="/produtos" className="text-gray-400 hover:text-white transition-colors">Romance</Link></li>
+                <li><Link href="/produtos" className="text-gray-400 hover:text-white transition-colors">Clássicos</Link></li>
               </ul>
             </div>
             <div>
@@ -180,13 +175,13 @@ export default function Home() {
               <ul className="space-y-2 text-gray-400">
                 <li>Rua Exemplo, 123</li>
                 <li>São Paulo - SP</li>
-                <li>contato@lojavirtual.com</li>
+                <li>contato@livrariaexample.com</li>
                 <li>(11) 1234-5678</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-sm text-gray-400 text-center">
-            <p>&copy; {new Date().getFullYear()} Loja Virtual. Todos os direitos reservados.</p>
+            <p>&copy; {new Date().getFullYear()} Livraria Virtual. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>

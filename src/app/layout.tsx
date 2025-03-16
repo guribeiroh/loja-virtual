@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Loja Virtual - Sua melhor experiência de compra online",
-  description: "Encontre produtos de qualidade com os melhores preços e entrega rápida para todo o Brasil.",
+  title: "Livraria Virtual - Sua melhor experiência de leitura",
+  description: "Encontre os melhores livros com preços acessíveis e entrega rápida para todo o Brasil.",
 };
 
 export default function RootLayout({
