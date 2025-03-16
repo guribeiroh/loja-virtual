@@ -37,15 +37,9 @@ export default function BookCard({ book, onAddToCart }: BookCardProps) {
           <p className="text-xs text-gray-500 mb-3">{book.category}</p>
           <p className="text-gray-600 text-sm mb-4 h-12 overflow-hidden flex-grow">{book.description}</p>
           <div className="flex justify-between items-center mt-auto">
-<<<<<<< HEAD
             <span className="font-bold text-orange-600">R$ {book.price.toFixed(2)}</span>
             <button 
               className="bg-orange-600 text-white py-1 px-3 rounded-md hover:bg-orange-700 transition-colors text-sm"
-=======
-            <span className="font-bold text-blue-600">R$ {book.price.toFixed(2)}</span>
-            <button 
-              className="bg-blue-600 text-white py-1 px-3 rounded-md hover:bg-blue-700 transition-colors text-sm"
->>>>>>> 08b896b296d1d5e2a83e8b76b624765a1d12e66c
               onClick={handleAddToCartClick}
               aria-label={`Adicionar ${book.title} ao carrinho`}
             >
